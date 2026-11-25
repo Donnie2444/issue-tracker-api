@@ -10,7 +10,7 @@ const labelSchema = new Schema(
   { timestamps: true }
 );
 
-// A label name is unique inside one project, but different projects may reuse it.
+
 labelSchema.index({ project: 1, name: 1 }, { unique: true });
 
 module.exports = mongoose.model('Label', labelSchema);
